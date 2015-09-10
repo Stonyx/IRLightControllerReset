@@ -94,7 +94,7 @@ void setup()
 
   // Reset all saved settings
   byte defaultSettings[] = { 0xDE, 0x12, 0x34, 0x56, 0x78, 0x90, 192, 168, 1, 254, 192, 168, 1, 1, 192, 168, 1, 1, 255, 255, 255, 0,
-          0xD4, 0xFE, 3, 0, 2, 0x78, 0x00, 0, 0x3C, 0x00, 11, 0, 1, 0x78, 0x00, 0 };
+          0xD4, 0xFE, 2, 0, 1, 0x78, 0x00, 0, 0x3C, 0x00, 10, 0, 0, 0x78, 0x00, 0 };
   for (unsigned short i = ADDRESSES_LOCATION_BEGIN; i < TIME_ZONE_LOCATION_END; ++i)
   {
     EEPROM.update(i, defaultSettings[i - ADDRESSES_LOCATION_BEGIN]);
