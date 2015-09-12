@@ -51,10 +51,10 @@ struct TimeZone
   signed short dstOffset; // In minutes
   byte dstStartMonth; // 0: Janary ... 11: December
   byte dstEndMonth; // 0: Janary ... 11: December
-  byte dstStartWeekday; // 0: Sunday ... 6: Saturday
-  byte dstEndWeekday; // 0: Sunday ... 6: Saturday
   byte dstStartWeekdayNumber; // 0: first, 1: second, 2: third, 3: fourth, 4: last
   byte dstEndWeekdayNumber; // 0: first, 1: second, 2: third, 3: fourth, 4: last
+  byte dstStartWeekday; // 0: Sunday ... 6: Saturday
+  byte dstEndWeekday; // 0: Sunday ... 6: Saturday
   unsigned short dstStartMinutes; // After midnight
   unsigned short dstEndMinutes; // After midnight
 };
@@ -92,7 +92,7 @@ void setup()
 
   // Reset all saved settings
   byte defaultSettings[] = { 0xDE, 0x12, 0x34, 0x56, 0x78, 0x90, 192, 168, 1, 254, 192, 168, 1, 1, 192, 168, 1, 1, 255, 255, 255, 0,
-          0xD4, 0xFE, 0x78, 0x00, 2, 10, 0, 0, 1, 0, 0x3C, 0x00, 0x78, 0x00 };
+          0xD4, 0xFE, 0x3C, 0x00, 2, 10, 1, 0, 0, 0, 0x78, 0x00, 0x78, 0x00 };
   for (unsigned short i = ADDRESSES_LOCATION_BEGIN; i < TIME_ZONE_LOCATION_END; ++i)
   {
     EEPROM.update(i, defaultSettings[i - ADDRESSES_LOCATION_BEGIN]);
