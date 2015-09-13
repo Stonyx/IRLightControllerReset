@@ -84,8 +84,7 @@ void setup()
 {
   // Initialize the serial communication for debugging
   DEBUG_SERIAL_BEGIN();
-  DEBUG_LOG_LN(F("Starting IR Light Controller sketch ..."));
-  DEBUG_LOG_FREE_RAM();
+  DEBUG_LOG_LN(F("Starting IR Light Controller Reset sketch ..."));
   
   // Log details
   DEBUG_LOG("Resetting saved settings ...");
