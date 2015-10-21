@@ -10,7 +10,7 @@
 // This software is provided "as is" without express or implied warranty.
 
 // Debug related definitions
-#define DEBUG
+// #define DEBUG
 #ifdef DEBUG
   #define DEBUG_SERIAL_BEGIN() Serial.begin(9600)
   #define DEBUG_LOG(string) Serial.print(string)
